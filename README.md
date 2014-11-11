@@ -1,5 +1,7 @@
 AFWebViewController
 ===================
+![Pod version](http://img.shields.io/cocoapods/v/AFWebViewController.svg?style=flat)
+![Pod platform](http://img.shields.io/cocoapods/p/AFWebViewController.svg?style=flat)
 
 In-app browser
 
