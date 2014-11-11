@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F73E4021A127487005B2317 /* AFWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5F73E4011A127487005B2317 /* AFWebViewController.bundle */; };
 		5F8F07EC1A0FC918002D45B8 /* AFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F07EB1A0FC918002D45B8 /* AFWebViewController.m */; };
 		5F8F07F11A0FDA4D002D45B8 /* AFModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F07F01A0FDA4D002D45B8 /* AFModalWebViewController.m */; };
 		5F8F07FD1A113F35002D45B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F07F61A113F35002D45B8 /* AppDelegate.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F73E4011A127487005B2317 /* AFWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AFWebViewController.bundle; sourceTree = "<group>"; };
 		5F8F07C11A0FC86F002D45B8 /* AFWebViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFWebViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8F07DA1A0FC86F002D45B8 /* AFWebViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFWebViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8F07EA1A0FC918002D45B8 /* AFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFWebViewController.h; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		5F8F07C41A0FC86F002D45B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5F73E4011A127487005B2317 /* AFWebViewController.bundle */,
 				5F8F07F71A113F35002D45B8 /* Info.plist */,
 				5F8F07F91A113F35002D45B8 /* main.m */,
 			);
@@ -193,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F73E4021A127487005B2317 /* AFWebViewController.bundle in Resources */,
 				5F8F08011A113F35002D45B8 /* Main.storyboard in Resources */,
 				5F8F07FF1A113F35002D45B8 /* Launch Screen.xib in Resources */,
 			);
@@ -391,6 +395,7 @@
 				5F8F07E61A0FC86F002D45B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F8F07E71A0FC86F002D45B8 /* Build configuration list for PBXNativeTarget "AFWebViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -399,6 +404,7 @@
 				5F8F07E91A0FC86F002D45B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

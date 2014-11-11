@@ -131,14 +131,14 @@
 
 - (UIBarButtonItem *)backBarButtonItem {
     if (!_backBarButtonItem) {
-        _backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil) style:UIBarButtonItemStylePlain target:self action:@selector(goBackTapped:)];
+        _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"AFWebViewController.bundle/Back"] style:UIBarButtonItemStylePlain target:self action:@selector(goBackTapped:)];
     }
     return _backBarButtonItem;
 }
 
 - (UIBarButtonItem *)forwardBarButtonItem {
     if (!_forwardBarButtonItem) {
-        _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Forward", nil) style:UIBarButtonItemStylePlain target:self action:@selector(goForwardTapped:)];
+        _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"AFWebViewController.bundle/Forward"] style:UIBarButtonItemStylePlain target:self action:@selector(goForwardTapped:)];
     }
     return _forwardBarButtonItem;
 }
