@@ -10,5 +10,6 @@ Pod::Spec.new do |s|
   s.weak_framework = 'WebKit'
   s.source_files = 'AFWebViewController/*.{h,m}'
   s.resources    = 'AFWebViewController/AFWebViewController.bundle'
+  s.requires_arc = true
   s.social_media_url = 'https://twitter.com/f0gh'
 end
