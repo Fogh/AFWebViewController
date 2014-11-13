@@ -12,4 +12,6 @@ Pod::Spec.new do |s|
   s.resources    = 'AFWebViewController/AFWebViewController.bundle'
   s.requires_arc = true
   s.social_media_url = 'https://twitter.com/f0gh'
+
+  s.dependency 'TUSafariActivity', '~> 1.0.2'
 end
