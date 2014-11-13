@@ -7,6 +7,7 @@
 //
 
 #import "AFWebViewController.h"
+#import <TUSafariActivity.h>
 @import WebKit;
 
 @interface AFWebViewController () <WKNavigationDelegate>
@@ -236,12 +237,14 @@
 - (void)actionButtonTapped:(id)sender {
     NSURL *url = self.webView.URL ?: self.request.URL;
     if (url) {
+        // More activities should be added in the future
+        NSArray *activities = @[[TUSafariActivity new]];
         if ([[url absoluteString] hasPrefix:@"file:///"]) {
             UIDocumentInteractionController *dc = [UIDocumentInteractionController interactionControllerWithURL:url];
             [dc presentOptionsMenuFromRect:self.view.bounds inView:self.view animated:YES];
         }
         else {
-            UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
+            UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:activities];
             
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
                 UIPopoverPresentationController *ctrl = activityController.popoverPresentationController;
