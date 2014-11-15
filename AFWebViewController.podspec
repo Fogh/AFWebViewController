@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/f0gh'
 
   s.dependency 'TUSafariActivity', '~> 1.0.2'
+  s.dependency 'ARChromeActivity', '~> 1.0.4'
 end
