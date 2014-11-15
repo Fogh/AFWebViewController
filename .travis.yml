@@ -1,0 +1,8 @@
+language: objective-c
+before_install:
+    - brew install xctool
+    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+
+script:
+    - pod lib lint
+    - xctool -workspace AFWebVIewController.xcworkspace -scheme 'AFWebVIewController' -sdk iphonesimulator build
