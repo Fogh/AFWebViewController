@@ -1,0 +1,4 @@
+language: objective-c
+script:
+    - pod lib lint
+    - xctool -workspace AFWebVIewController.xcworkspace -scheme 'AFWebVIewController' -sdk iphonesimulator build
