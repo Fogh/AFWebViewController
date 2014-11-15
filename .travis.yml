@@ -6,4 +6,4 @@ before_install:
 
 script:
     - pod lib lint
-    - xctool -workspace AFWebVIewController.xcworkspace -scheme 'AFWebVIewController' -sdk iphonesimulator build
+    - xctool -workspace AFWebViewController.xcworkspace -scheme 'AFWebViewController' -sdk iphonesimulator build
