@@ -11,3 +11,16 @@ In-app browser for quick implementation in your app. Pretty much inspired by [SV
 Uses [WKWebView](https://developer.apple.com/library/IOs/documentation/WebKit/Reference/WKWebView_Ref/index.html) for a much faster browsing experience. 
 
 **Requires iOS 8+**
+
+## Usage example
+
+Push AFWebViewController:
+```objectivec
+AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"https://google.com"];
+```
+
+Modal AFWebViewController:
+```objectivec
+AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"https://google.com"];
+```
+
