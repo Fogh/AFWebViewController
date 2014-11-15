@@ -8,6 +8,7 @@
 
 #import "AFWebViewController.h"
 #import <TUSafariActivity.h>
+#import <ARChromeActivity.h>
 @import WebKit;
 
 @interface AFWebViewController () <WKNavigationDelegate>
@@ -238,7 +239,7 @@
     NSURL *url = self.webView.URL ?: self.request.URL;
     if (url) {
         // More activities should be added in the future
-        NSArray *activities = @[[TUSafariActivity new]];
+        NSArray *activities = @[[TUSafariActivity new], [ARChromeActivity new]];
         if ([[url absoluteString] hasPrefix:@"file:///"]) {
             UIDocumentInteractionController *dc = [UIDocumentInteractionController interactionControllerWithURL:url];
             [dc presentOptionsMenuFromRect:self.view.bounds inView:self.view animated:YES];
