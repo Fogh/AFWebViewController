@@ -43,7 +43,13 @@ install_resource()
       ;;
   esac
 }
-          install_resource "${BUILT_PRODUCTS_DIR}/TUSafariActivity.bundle"
+          install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity.png"
+                    install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x.png"
+                    install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x~ipad.png"
+                    install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@3x.png"
+                    install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@3x~ipad.png"
+                    install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity~ipad.png"
+                    install_resource "${BUILT_PRODUCTS_DIR}/TUSafariActivity.bundle"
           
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then
