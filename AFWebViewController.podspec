@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'AFWebViewController'
-  s.version      = '1.0.1'
+  s.version      = '1.0.2'
   s.summary      = 'In-app browser that uses WKWebView'
   s.homepage     = 'https://github.com/Fogh/AFWebViewController'
   s.license      = 'MIT'
