@@ -9,18 +9,29 @@ In-app browser
 ## Description
 
 In-app browser for quick implementation in your app. Pretty much inspired by [SVWebViewController](https://github.com/TransitApp/SVWebViewController). 
-Uses [WKWebView](https://developer.apple.com/library/IOs/documentation/WebKit/Reference/WKWebView_Ref/index.html) for a much faster browsing experience. 
+Uses [`WKWebView`](https://developer.apple.com/library/IOs/documentation/WebKit/Reference/WKWebView_Ref/index.html) for a much faster browsing experience. 
 
 **Requires iOS 8+**
 
+## Installation with [CocoaPods](http://cocoapods.org/)
+
+Install with CocoaPods and import `AFWebViewController.h` or `AFModalWebViewController.h` where you want to use it.
+
+### Podfile
+
+```ruby
+platform :ios, '8.0'
+pod 'AFWebViewController', '~> 1.0'
+```
+
 ## Usage example
 
-Push AFWebViewController:
+**Push AFWebViewController:**
 ```objectivec
 AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"https://google.com"];
 ```
 
-Modal AFWebViewController:
+**Modal AFWebViewController:**
 ```objectivec
 AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"https://google.com"];
 ```
