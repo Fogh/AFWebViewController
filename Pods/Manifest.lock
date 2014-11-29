@@ -10,4 +10,4 @@ SPEC CHECKSUMS:
   ARChromeActivity: d8471d0f78b7fcc1de57929cfc1751b3a7f58bad
   TUSafariActivity: 63c6b0584d1f0a731e955c0e4d9c89cde63bedc2
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.35.0
