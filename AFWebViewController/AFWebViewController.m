@@ -14,11 +14,7 @@
 @interface AFWebViewController () <WKNavigationDelegate>
 
 // Bar buttons
-@property (nonatomic, strong) UIBarButtonItem *backBarButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *forwardBarButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *refreshBarButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *stopBarButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *actionBarButtonItem;
+@property (nonatomic, strong) UIBarButtonItem *backBarButtonItem, *forwardBarButtonItem, *refreshBarButtonItem, *stopBarButtonItem, *actionBarButtonItem;
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSURLRequest *request;
@@ -169,10 +165,10 @@
 #pragma mark - Toolbar
 
 - (void)updateToolbarItems {
-    self.backBarButtonItem.enabled = self.self.webView.canGoBack;
-    self.forwardBarButtonItem.enabled = self.self.webView.canGoForward;
+    self.backBarButtonItem.enabled = self.webView.canGoBack;
+    self.forwardBarButtonItem.enabled = self.webView.canGoForward;
     
-    UIBarButtonItem *refreshStopBarButtonItem = self.self.webView.isLoading ? self.stopBarButtonItem : self.refreshBarButtonItem;
+    UIBarButtonItem *refreshStopBarButtonItem = self.webView.isLoading ? self.stopBarButtonItem : self.refreshBarButtonItem;
     UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
@@ -241,16 +237,16 @@
         // More activities should be added in the future
         NSArray *activities = @[[TUSafariActivity new], [ARChromeActivity new]];
         if ([[url absoluteString] hasPrefix:@"file:///"]) {
-            UIDocumentInteractionController *dc = [UIDocumentInteractionController interactionControllerWithURL:url];
-            [dc presentOptionsMenuFromRect:self.view.bounds inView:self.view animated:YES];
+            UIDocumentInteractionController *documentController = [UIDocumentInteractionController interactionControllerWithURL:url];
+            [documentController presentOptionsMenuFromRect:self.view.bounds inView:self.view animated:YES];
         }
         else {
             UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:activities];
             
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-                UIPopoverPresentationController *ctrl = activityController.popoverPresentationController;
-                ctrl.sourceView = self.view;
-                ctrl.barButtonItem = sender;
+                UIPopoverPresentationController *popover = activityController.popoverPresentationController;
+                popover.sourceView = self.view;
+                popover.barButtonItem = sender;
             }
             
             [self presentViewController:activityController animated:YES completion:NULL];
