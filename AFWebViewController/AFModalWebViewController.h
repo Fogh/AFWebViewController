@@ -10,15 +10,82 @@
 
 @interface AFModalWebViewController : UINavigationController
 
+/**
+ *  Instantiate a modal WebViewController with URL address string.
+ *
+ *  @param urlString String with URL to show in web view.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
 + (instancetype)webViewControllerWithAddress:(NSString *)urlString;
+
+/**
+ *  Instantiate a modal WebViewController with URL.
+ *
+ *  @param URL URL with address to show in web view.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
 + (instancetype)webViewControllerWithURL:(NSURL *)URL;
+
+/**
+ *  Instantiate a modal WebViewController with URL request.
+ *
+ *  @param request NSURLRequest to show in web view.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
 + (instancetype)webViewControllerWithURLRequest:(NSURLRequest *)request;
 
-- (instancetype)initWithAddress:(NSString *)urlString;
-- (instancetype)initWithURL:(NSURL *)URL;
-- (instancetype)initWithURLRequest:(NSURLRequest *)request;
-- (instancetype)initWithHTMLString:(NSString *)HTMLString andBaseURL:(NSURL *)baseURL;
+/**
+ *  Instantiate a modal WebViewController with HTML string and base URL.
+ *
+ *  @param HTMLString HTML string to show in web view.
+ *  @param baseURL    Base URL containing local files like stylesheets etc.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
 + (instancetype)webViewControllerWithHTMLString:(NSString *)HTMLString andBaseURL:(NSURL *)baseURL;
 
+/**
+ *  Instantiate a modal WebViewController with URL address string.
+ *
+ *  @param urlString String with URL to show in web view.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
+- (instancetype)initWithAddress:(NSString *)urlString;
+
+/**
+ *  Instantiate a modal WebViewController with URL.
+ *
+ *  @param URL URL with address to show in web view.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
+- (instancetype)initWithURL:(NSURL *)URL;
+
+/**
+ *  Instantiate a modal WebViewController with URL request.
+ *
+ *  @param request NSURLRequest to show in web view.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
+- (instancetype)initWithURLRequest:(NSURLRequest *)request;
+
+/**
+ *  Instantiate a modal WebViewController with HTML string and base URL.
+ *
+ *  @param HTMLString HTML string to show in web view.
+ *  @param baseURL    Base URL containing local files like stylesheets etc.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
+- (instancetype)initWithHTMLString:(NSString *)HTMLString andBaseURL:(NSURL *)baseURL;
+
+/**
+ *  Tint color for navigation bar.
+ */
 @property (nonatomic, strong) UIColor *barsTintColor;
 @end
