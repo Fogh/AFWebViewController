@@ -17,7 +17,7 @@
 
 - (instancetype)initWithAddress:(NSString *)urlString;
 - (instancetype)initWithURL:(NSURL *)URL;
-- (instancetype)initWithURLRequest:(NSURLRequest *)request;
-- (instancetype)initWithHTMLString:(NSString *)HTMLString andBaseURL:(NSURL *)baseURL;
+- (instancetype)initWithURLRequest:(NSURLRequest *)request NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithHTMLString:(NSString *)HTMLString andBaseURL:(NSURL *)baseURL NS_DESIGNATED_INITIALIZER;
 
 @end
