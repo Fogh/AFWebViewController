@@ -9,18 +9,18 @@
 #import "AFWebViewController.h"
 #import <TUSafariActivity.h>
 #import <ARChromeActivity.h>
-@import WebKit;
 
 @interface AFWebViewController () <WKNavigationDelegate>
 
 // Bar buttons
 @property (nonatomic, strong) UIBarButtonItem *backBarButtonItem, *forwardBarButtonItem, *refreshBarButtonItem, *stopBarButtonItem, *actionBarButtonItem;
 
-@property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSURLRequest *request;
 @end
 
 @implementation AFWebViewController
+
+@synthesize webView = _webView;
 
 #pragma mark - Initialization
 

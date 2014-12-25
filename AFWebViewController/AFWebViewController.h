@@ -7,8 +7,11 @@
 //
 
 @import UIKit;
+@import WebKit;
 
 @interface AFWebViewController : UIViewController
+
+@property (nonatomic, strong, readonly) WKWebView *webView;
 
 /**
  *  Instantiate WebViewController with URL address string.
