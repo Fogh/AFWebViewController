@@ -36,6 +36,11 @@ AFWebViewController *webViewController = [AFWebViewController webViewControllerW
 AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"https://google.com"];
 ```
 
+## Other iOS Open Source Projects by Me
+
+- [AFAddressBookManager](https://github.com/Fogh/AFAddressBookManager)
+- [AFMobilePayRequestHandler](https://github.com/Fogh/AFMobilePayRequestHandler)
+
 ---
 <a href="http://Fogh.tip.me">
   <img
