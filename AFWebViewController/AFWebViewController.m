@@ -3,7 +3,7 @@
 //  AFWebViewController
 //
 //  Created by Anders Eriksen on 09/11/14.
-//  Copyright (c) 2014 Fogh Development. All rights reserved.
+//  Copyright (c) 2014-2015 Fogh Development. All rights reserved.
 //
 
 #import "AFWebViewController.h"
