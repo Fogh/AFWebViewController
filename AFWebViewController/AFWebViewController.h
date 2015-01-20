@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-@import WebKit;
+@class WKWebView;
 
 @interface AFWebViewController : UIViewController
 
