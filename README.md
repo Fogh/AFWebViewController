@@ -8,7 +8,7 @@ In-app browser
 
 ## Description
 
-In-app browser for quick implementation in your app. Pretty much inspired by [SVWebViewController](https://github.com/TransitApp/SVWebViewController). 
+In-app browser for quick implementation in your app. Pretty much inspired by [`SVWebViewController`](https://github.com/TransitApp/SVWebViewController). 
 Uses [`WKWebView`](https://developer.apple.com/library/IOs/documentation/WebKit/Reference/WKWebView_Ref/index.html) for a much faster browsing experience. 
 
 **Requires iOS 8+**
@@ -36,7 +36,7 @@ AFWebViewController *webViewController = [AFWebViewController webViewControllerW
 AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"https://google.com"];
 ```
 
-## Other iOS Open Source Projects by Me
+## Other iOS open source projects by me
 
 - [AFAddressBookManager](https://github.com/Fogh/AFAddressBookManager)
 - [AFMobilePayRequestHandler](https://github.com/Fogh/AFMobilePayRequestHandler)
