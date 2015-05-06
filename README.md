@@ -29,11 +29,13 @@ pod 'AFWebViewController', '~> 1.0'
 **Push AFWebViewController:**
 ```objectivec
 AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"https://google.com"];
+[self.navigationController pushViewController:webViewController animated:YES];
 ```
 
 **Modal AFWebViewController:**
 ```objectivec
 AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"https://google.com"];
+[self presentViewController:webViewController animated:YES completion:NULL];
 ```
 
 ## Other iOS open source projects by me
