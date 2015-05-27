@@ -26,13 +26,13 @@ pod 'AFWebViewController', '~> 1.0'
 
 ## Usage example
 
-**Push AFWebViewController:**
+**Push `AFWebViewController`:**
 ```objectivec
 AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"https://google.com"];
 [self.navigationController pushViewController:webViewController animated:YES];
 ```
 
-**Modal AFWebViewController:**
+**Modal `AFWebViewController`:**
 ```objectivec
 AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"https://google.com"];
 [self presentViewController:webViewController animated:YES completion:NULL];
