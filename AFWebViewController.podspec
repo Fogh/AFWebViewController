@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'AFWebViewController'
-  s.version      = '1.0.3'
+  s.version      = '1.0.4'
   s.summary      = 'In-app browser that uses WKWebView'
   s.homepage     = 'https://github.com/Fogh/AFWebViewController'
   s.license      = 'MIT'
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.social_media_url = 'https://twitter.com/f0gh'
 
-  s.dependency 'TUSafariActivity', '~> 1.0.2'
+  s.dependency 'TUSafariActivity', '~> 1.0.4'
   s.dependency 'ARChromeActivity', '~> 1.0.4'
 end
