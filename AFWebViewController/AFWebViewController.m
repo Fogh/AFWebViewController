@@ -17,6 +17,7 @@
 // Bar buttons
 @property (nonatomic, strong) UIBarButtonItem *backBarButtonItem, *forwardBarButtonItem, *refreshBarButtonItem, *stopBarButtonItem, *actionBarButtonItem;
 @property (nonatomic, strong) NSURLRequest *request;
+@property (nonatomic, strong) UIProgressView *progressView;
 @end
 
 @implementation AFWebViewController
@@ -73,6 +74,7 @@
 - (void)dealloc
 {
     self.webView.navigationDelegate = nil;
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 
 - (void)loadView {
@@ -83,6 +85,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateToolbarItems];
+    [self appendProgressView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -109,6 +112,11 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.progressView.frame = CGRectMake(0, [self.topLayoutGuide length], self.view.frame.size.width, 0.5);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
@@ -161,6 +169,13 @@
         _actionBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionButtonTapped:)];
     }
     return _actionBarButtonItem;
+}
+
+- (UIProgressView *)progressView {
+    if (!_progressView) {
+        _progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    }
+    return _progressView;
 }
 
 #pragma mark - Toolbar
@@ -252,6 +267,21 @@
             
             [self presentViewController:activityController animated:YES completion:NULL];
         }
+    }
+}
+
+#pragma mark - ProgressView
+
+- (void)appendProgressView {
+    [self.view addSubview:self.progressView];
+    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"estimatedProgress"]) {
+        self.progressView.hidden = self.webView.estimatedProgress == 1;
+        float progress = self.progressView.hidden ? 0 : self.webView.estimatedProgress;
+        [self.progressView setProgress:progress animated:true];
     }
 }
 
