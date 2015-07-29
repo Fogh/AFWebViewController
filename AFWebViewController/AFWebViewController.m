@@ -7,8 +7,8 @@
 //
 
 #import "AFWebViewController.h"
-#import <TUSafariActivity.h>
-#import <ARChromeActivity.h>
+#import "TUSafariActivity.h"
+#import "ARChromeActivity.h"
 
 @import WebKit;
 
