@@ -29,12 +29,15 @@ pod 'AFWebViewController', '~> 1.0'
 **Push `AFWebViewController`:**
 ```objectivec
 AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"https://google.com"];
+webViewController.toolbarTintColor = [UIColor orangeColor]; // not works if iPad
 [self.navigationController pushViewController:webViewController animated:YES];
 ```
 
 **Modal `AFWebViewController`:**
 ```objectivec
 AFModalWebViewController *webViewController = [AFModalWebViewController webViewControllerWithAddress:@"https://google.com"];
+webViewController.barsTintColor = [UIColor redColor];
+webViewController.toolbarTintColor = [UIColor orangeColor]; // not works if iPad
 [self presentViewController:webViewController animated:YES completion:NULL];
 ```
 

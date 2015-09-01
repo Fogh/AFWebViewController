@@ -84,6 +84,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (self.toolbarTintColor == nil) {
+        self.toolbarTintColor = self.navigationController.navigationBar.tintColor;
+    }
+    
     [self updateToolbarItems];
     [self appendProgressView];
 }
@@ -194,7 +199,6 @@
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        CGFloat toolbarWidth = 250;
         fixedSpace.width = 35;
         
         NSArray *items = @[fixedSpace,
@@ -206,10 +210,6 @@
                           fixedSpace,
                           self.actionBarButtonItem];
         
-        UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, toolbarWidth, 44)];
-        toolbar.items = items;
-        toolbar.barStyle = self.navigationController.navigationBar.barStyle;
-        toolbar.tintColor = self.navigationController.navigationBar.tintColor;
         self.navigationItem.rightBarButtonItems = items.reverseObjectEnumerator.allObjects;
     }
     else {
@@ -224,7 +224,7 @@
                           fixedSpace];
         
         self.navigationController.toolbar.barStyle = self.navigationController.navigationBar.barStyle;
-        self.navigationController.toolbar.tintColor = self.navigationController.navigationBar.tintColor;
+        self.navigationController.toolbar.tintColor = self.toolbarTintColor;
         self.toolbarItems = items;
     }
 }
