@@ -84,4 +84,9 @@
     self.navigationBar.tintColor = self.barsTintColor;
 }
 
+- (void)setToolbarTintColor:(UIColor *)color {
+    _toolbarTintColor = color;
+    self.webViewController.toolbarTintColor = _toolbarTintColor;
+}
+
 @end

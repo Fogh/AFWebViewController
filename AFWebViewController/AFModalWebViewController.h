@@ -88,4 +88,10 @@
  *  Tint color for navigation bar.
  */
 @property (nonatomic, strong) UIColor *barsTintColor;
+
+/**
+ *  Tint color for tool bar.
+ */
+@property (nonatomic, strong) UIColor *toolbarTintColor;
+
 @end
