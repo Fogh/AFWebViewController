@@ -87,4 +87,10 @@
  */
 - (instancetype)initWithHTMLString:(NSString *)HTMLString andBaseURL:(NSURL *)baseURL NS_DESIGNATED_INITIALIZER;
 
+
+/**
+ *  Tint color for tool bar.
+ */
+@property (nonatomic, strong) UIColor *toolbarTintColor;
+
 @end
