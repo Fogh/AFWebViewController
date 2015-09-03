@@ -85,7 +85,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (self.toolbarTintColor == nil) {
+    if (!self.toolbarTintColor) {
         self.toolbarTintColor = self.navigationController.navigationBar.tintColor;
     }
     
@@ -121,7 +121,7 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    self.progressView.frame = CGRectMake(0, [self.topLayoutGuide length], self.view.frame.size.width, 0.5);
+    self.progressView.frame = CGRectMake(0, self.topLayoutGuide.length, self.view.frame.size.width, 0.5);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
@@ -286,7 +286,7 @@
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
         self.progressView.hidden = self.webView.estimatedProgress == 1;
         float progress = self.progressView.hidden ? 0 : self.webView.estimatedProgress;
-        [self.progressView setProgress:progress animated:true];
+        [self.progressView setProgress:progress animated:YES];
     }
 }
 
