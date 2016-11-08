@@ -8,6 +8,9 @@
 
 @import UIKit;
 @class WKWebView;
+@class WKWebViewConfiguration;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface AFWebViewController : UIViewController
 
@@ -75,7 +78,17 @@
  *
  *  @return Instance of `AFWebViewController`.
  */
-- (instancetype)initWithURLRequest:(NSURLRequest *)request NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithURLRequest:(NSURLRequest *)request;
+
+/**
+ *  Instantiate WebViewController with URL request.
+ *
+ *  @param request        NSURLRequest to show in web view.
+ *  @param configuration  a collection of properties used to initialize a web view.
+ *
+ *  @return Instance of `AFWebViewController`.
+ */
+- (instancetype)initWithURLRequest:(NSURLRequest *)request configuration:(nullable WKWebViewConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
 
 /**
  *  Instantiate WebViewController with HTML string and base URL.
@@ -94,3 +107,6 @@
 @property (nonatomic, strong) UIColor *toolbarTintColor;
 
 @end
+
+NS_ASSUME_NONNULL_END
+

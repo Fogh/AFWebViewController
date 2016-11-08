@@ -7,6 +7,7 @@
 //
 
 @import UIKit;
+@class WKWebViewConfiguration;
 
 @interface AFModalWebViewController : UINavigationController
 
@@ -73,6 +74,16 @@
  *  @return Instance of `AFModalWebViewController`.
  */
 - (instancetype)initWithURLRequest:(NSURLRequest *)request;
+
+/**
+ *  Instantiate a modal WebViewController with URL request.
+ *
+ *  @param request        NSURLRequest to show in web view.
+ *  @param configuration  a collection of properties used to initialize a web view.
+ *
+ *  @return Instance of `AFModalWebViewController`.
+ */
+- (instancetype)initWithURLRequest:(NSURLRequest *)request configuration:(WKWebViewConfiguration *)configuration;
 
 /**
  *  Instantiate a modal WebViewController with HTML string and base URL.
