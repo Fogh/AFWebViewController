@@ -100,6 +100,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithHTMLString:(NSString *)HTMLString andBaseURL:(NSURL *)baseURL NS_DESIGNATED_INITIALIZER;
 
+- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
+
+- (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
 
 /**
  *  Tint color for tool bar.
