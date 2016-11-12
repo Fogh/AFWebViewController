@@ -1,5 +1,5 @@
 PODS:
-  - ARChromeActivity (1.0.4)
+  - ARChromeActivity (1.0.6)
   - TUSafariActivity (1.0.4)
 
 DEPENDENCIES:
@@ -7,7 +7,9 @@ DEPENDENCIES:
   - TUSafariActivity (~> 1.0.4)
 
 SPEC CHECKSUMS:
-  ARChromeActivity: 9064d94803338d3377f3e1013a8e8f4821d7daf1
+  ARChromeActivity: 5dcf9b9f09323761f992aff3525cdd777f83609d
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
 
-COCOAPODS: 0.37.2
+PODFILE CHECKSUM: bdc9da0d3f5548384638375cc975e23aeeb72dbc
+
+COCOAPODS: 1.1.1
