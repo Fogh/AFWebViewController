@@ -154,7 +154,7 @@
 }
 
 - (UIImage *)frameworkBundleImage:(NSString *)imageName {
-    NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
+    NSBundle *frameworkBundle = [NSBundle bundleForClass: NSClassFromString(@"AFWebViewController")];
     return [UIImage imageNamed:imageName inBundle:frameworkBundle compatibleWithTraitCollection:nil];
 }
 
