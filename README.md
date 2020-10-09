@@ -6,6 +6,8 @@ AFWebViewController
 
 In-app browser
 
+_**For apps targeting iOS 9 and greater you should be using [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller).**_
+
 ## Description
 
 In-app browser for quick implementation in your app. Pretty much inspired by [`SVWebViewController`](https://github.com/TransitApp/SVWebViewController). 
@@ -39,8 +41,7 @@ AFModalWebViewController *webViewController = [AFModalWebViewController webViewC
 webViewController.barsTintColor = [UIColor redColor];
 webViewController.toolbarTintColor = [UIColor orangeColor]; // Does not work on iPad
 [self presentViewController:webViewController animated:YES completion:NULL];
-```
-
+``
 ## Other iOS open source projects by me
 
 - [AFAddressBookManager](https://github.com/Fogh/AFAddressBookManager)
